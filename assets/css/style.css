@@ -1,0 +1,158 @@
+
+/* ------------------------------------------------------ */
+/* colors */
+/* ------------------------------------------------------ */
+
+.color-blue { color: #89c7de; }
+
+.color-white { color: #fff; }
+
+.color-black { color: #000000; }
+
+.color-red { color:  #FF0800; }
+
+/* ------------------------------------------------------ */
+/* custom jumbotron */
+/* ------------------------------------------------------ */
+
+.jumbotron-custom {
+	background-image: url("../images/chalkboard2.jpg");
+	color: #fff;
+	height: 100%;
+	width: 100%;
+	position: relative;
+	background-attachment: fixed;
+}
+
+.jumbotron > .container-fluid > h1 { 
+	font-size: 900%; 
+	/*font-family: 'Russo One', sans-serif;*/
+	font-family: 'Fredericka the Great', sans-serif;
+	
+}
+
+#jumbo-pic {
+	height: 30%;
+	width: 20%;
+	/*filter: drop-shadow(5px 5px 5px #222);*/
+}
+
+.pHead {
+	font-size: 100%; 
+	/*font-family: 'Russo One', sans-serif;*/
+	/*text-shadow: 2px 1px black;*/
+}
+
+
+
+/* ------------------------------------------------------ */
+/* custom container */
+/* ------------------------------------------------------ */
+
+.container-custom { 
+	margin: 0 5%; 
+	width: auto;
+}
+
+
+/* ------------------------------------------------------ */
+/* custom panel */
+/* ------------------------------------------------------ */
+
+.panel-custom { border-color: #333333 }
+
+.panel-primary > .panel-heading { 
+	background-image: url('../images/chalkboard2.jpg'); 
+	background-attachment: fixed;
+}
+
+/* ------------------------------------------------------ */
+/* clearfix */
+/* ------------------------------------------------------ */
+
+.clearfix {
+	overflow: auto;
+}
+
+/* ------------------------------------------------------ */
+/* custom div holder */
+/* ------------------------------------------------------ */
+
+#div-holder { 
+	position: absolute; 
+	bottom: 5%;
+	left: 15%;
+	right: 15%;
+}
+
+
+/* ------------------------------------------------------ */
+/* custom footer */
+/* ------------------------------------------------------ */
+
+.custom-footer {
+	background-image: url("../images/chalkboard2.jpg");
+	background-attachment: fixed;
+	height: 200px;
+	padding: 60px 0;
+}
+
+.footer-size { 
+	font-size: 150%;
+	border-bottom: 1px solid #FF0800;
+	margin: 0 0 10px 0;
+}
+
+.custom-icon { font-size: 200%; }
+
+.list-inlined { 
+	display: inline-block; 
+	margin: 0 10px;
+}
+
+
+#createTestButton {
+	width: 120px;
+}
+
+
+.nav-tabs > li > a:hover {
+	background-image: url("../images/chalkboard2.jpg");
+}
+
+
+#analyzeStuButton {
+	width: 100%;
+	height: 30px;
+}
+
+
+
+
+/* ------------------------------------------------------ */
+/* media queries */
+/* ------------------------------------------------------ */
+
+@media only screen and (max-width: 560px) {
+    .jumbotron > .container-fluid > h1 { 
+		font-size: 500%; 
+	}
+
+	.container { 
+		margin: 0; 
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	.panel-body {
+		text-align: center;
+	}
+}
+
+@media only screen and (max-width: 1068px) {
+	.custom-icon {
+		font-size: 150%;
+	}
+}
+

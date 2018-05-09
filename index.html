@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DataB</title>
+    <link rel="icon" type="image/png" href="assets/images/touch4.png" height="32px" width="32px">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+    <script type="text/javascript" src='assets/javascript/app.js'></script>
+<!-- datatables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/select/1.2.5/js/dataTables.select.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/select/1.2.5/css/select.dataTables.min.css">
+    <script type="text/javascript" src="extensions/Editor/js/dataTables.editor.min.js"></script>
+    <link rel="stylesheet" href="extensions/Editor/js/editor.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.1/css/buttons.dataTables.min.css">
+<!-- datatables copy/print/export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
+    <script src=" https://cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
+     <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.print.min.js"></script>
+
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="jumbotron text-center jumbotron-custom clearfix">
+                <div class="container-fluid">
+                    <h1 class="animated pulse">
+                    <span class="color-red">D</span>ataB<img id="jumbo-pic" src="assets/images/touch4.png"/>
+                </h1>
+                    <br>
+                    <br>
+                    <div class="text-center color-white pHead" id="div-holder">
+                        <h2>
+                        Teaching & Data made easy...
+                    </h2>
+                    </div>
+                    <!-- div holder -->
+                </div>
+                <!-- end container fluid -->
+            </div>
+            <!-- end jumbotron text center jumbotron custom -->
+        </div>
+        <!-- end col md 12 -->
+    </div>
+    <!-- end row -->
+    <!-- tabs code -->
+    <ul class="nav nav-tabs" id="navTABS" class="text-muted">
+        <li class="active"><a data-toggle="tab" href="#home">Questions</a></li>
+        <li><a data-toggle="tab" href="students.html">Students</a></li>
+        <li><a data-toggle="tab" href="#menu2">Admin</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="home" class="tab-pane fade in active">
+        </div>
+        <div id="menu1" class="tab-pane fade">
+            <h3>Menu 1</h3>
+            <p>Some content in menu 1.</p>
+        </div>
+        <div id="menu2" class="tab-pane fade">
+            <h3>Menu 2</h3>
+            <p>Some content in menu 2.</p>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-primary panel-custom" id="CommunityQ">
+                    <div class="panel-heading">
+                        <h2 class="text-center">
+                    <span class="color-white pHead">Community Questions</span>
+                </h2>
+                    </div>
+                    <!-- end panel heading -->
+                    <div class="panel-body clearfix">
+                        <table id="example" class="display" style="width:100%">
+                            <button id="save">Save</button>
+                            <thead>
+                                <tr>
+                                    <th>Subject</th>
+                                    <th>Grade</th>
+                                    <th>Level</th>
+                                    <th>Type</th>
+                                    <th>Question</th>
+                                    <th>answer1</th>
+                                    <th>answer2</th>
+                                    <th>answer3</th>
+                                    <th>answer4</th>
+                                    <th>answer5</th>
+                                    <th>answer6</th>
+                                    <th>answer7</th>
+                                    <th>Correct</th>
+                                    <th>textbook</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr id="row_1">
+                                    <td>Math</td>
+                                    <td>5</td>
+                                    <td>Easy</td>
+                                    <td>Addition</td>
+                                    <td>What is 5 + 4?</td>
+                                    <td>9</td>
+                                    <td>1</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>-1</td>
+                                    <td>8</td>
+                                    <td>54</td>
+                                    <td>9</td>
+                                    <td>Rabkin</td>
+                                </tr>
+                                <tr id="row_2">
+                                    <td>Math</td>
+                                    <td>5</td>
+                                    <td>Easy</td>
+                                    <td>Subtraction</td>
+                                    <td>What is 18 - 4?</td>
+                                    <td>9</td>
+                                    <td>11</td>
+                                    <td>14</td>
+                                    <td>12</td>
+                                    <td>22</td>
+                                    <td>15</td>
+                                    <td>5</td>
+                                    <td>14</td>
+                                    <td>Rabkin</td>
+                                </tr>
+                                <tr id="row_3">
+                                    <td>Social Studies</td>
+                                    <td>3</td>
+                                    <td>Easy</td>
+                                    <td>Ben Franklin</td>
+                                    <td>What did Ben Franklin invent?</td>
+                                    <td>$100 Bill</td>
+                                    <td>Frank and Beans</td>
+                                    <td>Frank Sinatra</td>
+                                    <td>Frankenstein</td>
+                                    <td>Franklin Mint</td>
+                                    <td>Bifocals</td>
+                                    <td>Piano</td>
+                                    <td>Bifocals</td>
+                                    <td>Johnson</td>
+                                </tr>
+                                <tr id="row_4">
+                                    <td>Social Studies</td>
+                                    <td>3</td>
+                                    <td>Medium</td>
+                                    <td>Ben Franklin</td>
+                                    <td>What document did Ben Franklin sign?</td>
+                                    <td>Magna Carta</td>
+                                    <td>Declaration of Independence</td>
+                                    <td>Bill of Lading</td>
+                                    <td>Independent Carta</td>
+                                    <td>Declaration of Lading</td>
+                                    <td>Independence Hallmark</td>
+                                    <td>Declaration of Bill</td>
+                                    <td>Declaration of Independence</td>
+                                    <td>Johnson</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- end panel body -->
+                </div>
+                <!-- end panel panel primary -->
+            </div>
+            <!-- end col md 12 -->
+            <div class="col-md-12">
+                <div class="panel panel-primary panel-custom">
+                    <div class="panel-heading">
+                        <h2 class="text-center"> 
+                    <span class="color-white pHead">My Questions</span>
+                </h2>
+                    </div>
+                    <!-- end panel heading -->
+                    <div class="panel-body" id="MyQ">
+                        <table id="example2" class="display" cellspacing="0" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>Subject</th>
+                                    <th>Grade</th>
+                                    <th>Level</th>
+                                    <th>Type</th>
+                                    <th>Question</th>
+                                    <th>Answer1</th>
+                                    <th>Answer2</th>
+                                    <th>Answer3</th>
+                                    <th>Answer4</th>
+                                    <th>Answer5</th>
+                                    <th>Answer6</th>
+                                    <th>Answer7</th>
+                                    <th>Correct</th>
+                                    <th>TextBook</th>
+                                </tr>
+                                <tfoot>
+                                    <tr>
+                                        <th>Subject</th>
+                                        <th>Grade</th>
+                                        <th>Level</th>
+                                        <th>Type</th>
+                                        <th>Question</th>
+                                        <th>Answer1</th>
+                                        <th>Answer2</th>
+                                        <th>Answer3</th>
+                                        <th>Answer4</th>
+                                        <th>Answer5</th>
+                                        <th>Answer6</th>
+                                        <th>Answer7</th>
+                                        <th>Correct</th>
+                                        <th>TextBook</th>
+                                    </tr>
+                                </tfoot>
+                        </table>
+                        <!-- problem is that if you put any button in the form the page will autmoatically reload...  we do not want that!!! Solved problem by simply taking it out of form tags-->
+                        <br>
+                        <div>
+                            <label for="testName">Create Test:</label>
+                            <input type="testName" id="testName" placeholder="Enter Test Name">
+                            <input type="button" id="createTestButton" value="Create Test">
+                        </div>
+                        <br>
+                    </div>
+                    <!-- end panel body -->
+                </div>
+                <!-- end panel panel primary -->
+            </div>
+            <!-- end col md 12 -->
+            <div class="col-md-12">
+                <div class="panel panel-primary panel-custom">
+                    <div class="panel-heading panel-heading-custom">
+                        <h2 class="text-center">
+                    <span class="color-white pHead">My Tests</span>
+                </h2>
+                    </div>
+                    <!-- end panel heading -->
+                    <div class="panel-body" id="MyT">
+                        <table class="table table-hover" id="createdTests">
+                            <thead>
+                                <tr>
+                                    <th>Test Name</th>
+                                    <th>Date Created</th>
+                                    <th>Test Access Code</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- end panel body -->
+                </div>
+                <!-- end panel  -->
+            </div>
+            <!-- end col md 12 -->
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end container -->
+    <!-- ******************** footer******************** -->
+    <footer class="container-fluid custom-footer clearfix">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="col-md-offset-3 col-md-6">
+                    <ul class="color-white small">
+                        <li class="list-unstyled footer-size">About</li>
+                        <li class="list-unstyled">Who are we?</li>
+                    </ul>
+                </div>
+                <!-- end col md offset 3 col md 6 -->
+            </div>
+            <!-- end col md 4 -->
+            <div class="col-md-4">
+                <div class="col-md-offset-3 col-md-6">
+                    <ul class="color-white small">
+                        <li class="list-unstyled footer-size">Copyright</li>
+                        <li class="list-unstyled">&copy; 2018 DataB, LLC.</li>
+                    </ul>
+                </div>
+                <!-- end col md offset 3 col md 6 -->
+            </div>
+            <!-- end col md 4 -->
+            <div class="col-md-4">
+                <div class="col-md-offset-3 col-md-6">
+                    <ul class="color-white small">
+                        <li class="list-unstyled footer-size">Legal</li>
+                        <ul class="list-inline">
+                            <li class="list-unstyled">Privacy Policy</li>
+                        </ul>
+                    </ul>
+                </div>
+                <!-- end col md offset 3 col md 6 -->
+            </div>
+            <!-- end col md 4 -->
+        </div>
+        <!-- end row -->
+    </footer>
+    <!-- end container fluid custom footer -->
+</body>
+
+</html>
